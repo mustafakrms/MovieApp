@@ -16,20 +16,20 @@ namespace MovieApp.Controllers
             // CategoryRepository.Category
 
 
-            MovieCategoryModel model = new MovieCategoryModel();
-            model.Categories = CategoryRepository.Categories;
-            model.Movies = MovieRepository.Movies;
+            //MovieCategoryModel model = new MovieCategoryModel();
+            //model.Categories = CategoryRepository.Categories;
+            //model.Movies = MovieRepository.Movies;
 
 
 
-            return View(model);
+            return View(MovieRepository.Movies);
         }
         public ActionResult Details(int id)
         {
-            MovieCategoryModel model = new MovieCategoryModel();
-            model.Categories = CategoryRepository.Categories;
-            model.Movie = MovieRepository.GetById(id);
-            return View(model);
+            //MovieCategoryModel model = new MovieCategoryModel();
+            //model.Categories = CategoryRepository.Categories;
+            //model.Movie = MovieRepository.GetById(id);
+            return View(MovieRepository.GetById(id));
         }
         public ActionResult Contact()
         {
