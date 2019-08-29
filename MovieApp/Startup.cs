@@ -26,8 +26,8 @@ namespace MovieApp
             app.UseStaticFiles();//wwwroot => /css/style.css --- /img/1.jpg
             app.UseStaticFiles(new StaticFileOptions {
                 FileProvider=new PhysicalFileProvider(Path.Combine
-                (Directory.GetCurrentDirectory(),"Dependencies")),
-                RequestPath="/npm"
+                (Directory.GetCurrentDirectory(),"node_modules")),
+                RequestPath="/modules"
             });
             if (env.IsDevelopment())
             {
