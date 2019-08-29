@@ -13,6 +13,10 @@ namespace MovieApp.Controllers
         {
             return View(Repository.Movies);
         }
+        public ActionResult Details(int id)
+        {
+            return View(Repository.GetById(id));
+        }
         public ActionResult Contact()
         {
             return View();
