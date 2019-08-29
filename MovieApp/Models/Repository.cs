@@ -12,7 +12,7 @@ namespace MovieApp.Models
         {
             _movies = new List<Movie>()
             {
-                new Movie(){Id=1, Name="Captain America",Description="Kaptan Amerika",ImageUrl="1.jpg"},
+                new Movie(){Id=1, Name="Captain America",Description="Kaptan Amerika",ImageUrl="3.jpg"},
                 new Movie(){Id=2, Name="Hulk",Description="Hulk",ImageUrl="2.jpg"},
                 new Movie(){Id=3, Name="Iron Man",Description="Demir Adam",ImageUrl="3.jpg"},
                 new Movie(){Id=4, Name="Hawkeye",Description="Ok",ImageUrl="4.jpg"},
