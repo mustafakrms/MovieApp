@@ -10,19 +10,17 @@ namespace MovieApp.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Index(int? id)
         {
-            // ProductRepository.Movies
-            // CategoryRepository.Category
+            var movies = MovieRepository.Movies;
+            if (id!=null)
+            {
+                movies = movies.Where(i => i.CategoryId == id).ToList();
+
+            }
 
 
-            //MovieCategoryModel model = new MovieCategoryModel();
-            //model.Categories = CategoryRepository.Categories;
-            //model.Movies = MovieRepository.Movies;
-
-
-
-            return View(MovieRepository.Movies);
+            return View(movies);
         }
         public ActionResult Details(int id)
         {
