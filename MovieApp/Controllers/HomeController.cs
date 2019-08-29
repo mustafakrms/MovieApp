@@ -12,11 +12,24 @@ namespace MovieApp.Controllers
     {
         public IActionResult Index()
         {
-            return View(ProductRepository.Movies);
+            // ProductRepository.Movies
+            // CategoryRepository.Category
+
+
+            MovieCategoryModel model = new MovieCategoryModel();
+            model.Categories = CategoryRepository.Categories;
+            model.Movies = MovieRepository.Movies;
+
+
+
+            return View(model);
         }
         public ActionResult Details(int id)
         {
-            return View(ProductRepository.GetById(id));
+            MovieCategoryModel model = new MovieCategoryModel();
+            model.Categories = CategoryRepository.Categories;
+            model.Movie = MovieRepository.GetById(id);
+            return View(model);
         }
         public ActionResult Contact()
         {
